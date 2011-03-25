@@ -219,7 +219,7 @@ Licensed under GPLv2.
 This application would not exists without:
 * Python (http://www.python.org/)
 * PyGTK (http://www.pygtk.org/)
-* Python dBase (http://groups.google.com/group/python-dbase)
+* dbf python package (http://pypi.python.org/pypi/dbf/)
 
 © PT MONDIAL TEKNOLOGI SOLUSI, 2011
 http://www.mondial.co.id/
