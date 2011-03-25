@@ -4,6 +4,9 @@ http://www.mondial.co.id/products/simpledbfbrowser/
 This is a free and opensource application to view the content
 of dBase, FoxPro, and Visual FoxPro .dbf file.
 
+You can download MS Windows version (binary and installation file) on:
+http://www.mondial.co.id/products/simpledbfbrowser/
+
 Supported Operating System
 --------------------------
 * Binary version can be run on MS Windows (tested on MS Windows7).
