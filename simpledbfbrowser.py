@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: latin-1 -*-
 
+import threading
+import thread
 import pygtk
 pygtk.require('2.0')
 import gtk
@@ -8,6 +10,9 @@ import gobject
 import dbf
 import os.path
 from datetime import datetime
+import time
+
+gobject.threads_init()
 
 class EksplorasiDbf:
     main_title = "Simple DBF Browser"
@@ -18,6 +23,10 @@ class EksplorasiDbf:
     scrolled_window = None
     list_view = None
     dbf_file = None
+    dbf_table = None
+    row_count = 0
+
+    progress_message = None
 
     def __init__(self):
         self.window = gtk.Window(gtk.WINDOW_TOPLEVEL)
@@ -126,63 +135,47 @@ class EksplorasiDbf:
         self.dbf_file = dbf_file
         self.window.set_title("%s: %s" % (self.main_title, os.path.basename(dbf_file)))
 
-        print datetime.today(), "opening dbf file"
-        self.dbf_table = dbf.Table(dbf_file, read_only = True)
+        self.progress_window = gtk.Window(gtk.WINDOW_TOPLEVEL)
+        self.progress_window.set_title('Reading DBF file...')
+        self.progress_window.set_border_width(10)
+        self.progress_window.set_type_hint(gtk.gdk.WINDOW_TYPE_HINT_SPLASHSCREEN)
+        self.progress_window.set_modal(True)
+        self.progress_window.set_position(gtk.WIN_POS_CENTER_ALWAYS)
+        self.progress_window.set_property("skip-taskbar-hint", True)
+        self.progress_window.set_transient_for(self.window)
 
-        print datetime.today(), "retrieving fields"
-        fields = dbf.get_fields(self.dbf_table)
-        print datetime.today(), "fields retrieved"
+        vbox = gtk.VBox(False, 5)
 
-        if self.scrolled_window:
-            print datetime.today(), "destroying old visualization"
-            self.scrolled_window.destroy()
+        label = gtk.Label('Please wait while reading DBF file...')
+        vbox.pack_start(label, True, True, 5)
+        label.show()
 
+        self.progress_message = gtk.Label('preparing')
+        vbox.pack_start(self.progress_message, True, True, 5)
+        self.progress_message.show()
 
-        print datetime.today(), "creating new visualization"
+        self.progress_bar = gtk.ProgressBar()
+        self.progress_bar.set_orientation(gtk.PROGRESS_LEFT_TO_RIGHT)
+        self.progress_bar.show()
+        vbox.pack_start(self.progress_bar, True, True, 5)
 
-        store_param= [str] * len(fields)
-        store_param.insert(0, int)
+        vbox.show()
+        self.progress_window.add(vbox)
+        self.progress_window.show()
 
-        store = gtk.ListStore(*store_param)
-        self.list_view = gtk.TreeView(store)
-        self.list_view.show()
-        self.list_view.set_grid_lines(gtk.TREE_VIEW_GRID_LINES_HORIZONTAL)
+        self.progress_timeout_source_id = gobject.timeout_add(500, self.progress_bar_timeout)
 
-        self.scrolled_window = gtk.ScrolledWindow()
-        self.scrolled_window.set_policy(gtk.POLICY_AUTOMATIC, gtk.POLICY_AUTOMATIC)
-        self.scrolled_window.add(self.list_view)
-        self.scrolled_window.show()
-        self.content_box.pack_start(self.scrolled_window, True, True, 0)
+        read_dbf = ReadDbf(self)
+        read_dbf.start()
 
-        i = 0
-        print datetime.today(), "populating list view"
-        column = gtk.TreeViewColumn("No.")
-        self.list_view.append_column(column)
-        cell = gtk.CellRendererText()
-        cell.set_alignment(1, 0)
-        column.pack_start(cell, True)
-        column.add_attribute(cell, 'text', i)
+    def progress_bar_timeout(self):
+        self.progress_bar.pulse()
+        if self.row_count:
+            self.progress_bar_update_status('%d rows' % self.row_count)
+        return True
 
-        for field_name in fields:
-            i = i + 1
-            column = gtk.TreeViewColumn(field_name)
-            self.list_view.append_column(column)
-            cell = gtk.CellRendererText()
-            column.pack_start(cell, True)
-            column.add_attribute(cell, 'text', i)
-            column.set_resizable(True)
-
-        model = self.list_view.get_model()
-        self.list_view.set_model()
-
-        row_count = 0
-        for row in self.dbf_table:
-            row_count = row_count + 1
-            data = list(row)
-            data.insert(0, row_count)
-            model.append(data)
-
-        self.list_view.set_model(model)
+    def progress_bar_update_status(self, message):
+        self.progress_message.set_text(message)
 
     def show_about_window(self, data):
         about_window = gtk.Window(gtk.WINDOW_TOPLEVEL)
@@ -239,6 +232,92 @@ All rights reserved.
         about_window.show()
         return
 
+class ReadDbf(threading.Thread):
+    finished = None
+    caller = None
+
+    def __init__(self, caller):
+        super(ReadDbf, self).__init__()
+        self.caller = caller
+
+    def run(self):
+        caller = self.caller
+
+        print datetime.today(), "opening dbf file"
+        caller.dbf_table = dbf.Table(caller.dbf_file, read_only = True)
+
+        print datetime.today(), "retrieving fields"
+        fields = dbf.get_fields(caller.dbf_table)
+        print datetime.today(), "fields retrieved"
+
+        if caller.scrolled_window:
+            print datetime.today(), "destroying old visualization"
+            gobject.idle_add(caller.scrolled_window.destroy)
+
+        print datetime.today(), "creating new visualization"
+
+        store_param= [str] * len(fields)
+        store_param.insert(0, int)
+
+        store = gtk.ListStore(*store_param)
+        caller.list_view = gtk.TreeView(store)
+        caller.list_view.set_grid_lines(gtk.TREE_VIEW_GRID_LINES_HORIZONTAL)
+
+        caller.scrolled_window = gtk.ScrolledWindow()
+        caller.scrolled_window.set_policy(gtk.POLICY_AUTOMATIC, gtk.POLICY_AUTOMATIC)
+        caller.scrolled_window.add(caller.list_view)
+        caller.content_box.pack_start(caller.scrolled_window, True, True, 0)
+
+        i = 0
+        print datetime.today(), "populating list view"
+        column = gtk.TreeViewColumn("No.")
+        caller.list_view.append_column(column)
+        cell = gtk.CellRendererText()
+        cell.set_alignment(1, 0)
+        column.pack_start(cell, True)
+        column.add_attribute(cell, 'text', i)
+
+        print datetime.today(), "creating columns for fields"
+        for field_name in fields:
+            i = i + 1
+            column = gtk.TreeViewColumn(field_name)
+            caller.list_view.append_column(column)
+            cell = gtk.CellRendererText()
+            column.pack_start(cell, True)
+            column.add_attribute(cell, 'text', i)
+            column.set_resizable(True)
+
+        print datetime.today(), "retrieving old model"
+        model = caller.list_view.get_model()
+        print datetime.today(), "unset model"
+        caller.list_view.set_model()
+
+        caller.row_count = 0
+        print datetime.today(), "iterating table"
+        for row in caller.dbf_table:
+            caller.row_count = caller.row_count + 1
+            try:
+                data = list(row)
+                data.insert(0, caller.row_count)
+                model.append(data)
+            except:
+                print datetime.today(), 'error detected (64b68)'
+                print row
+            #time.sleep(1)
+
+        print datetime.today(), "setting list view model"
+        caller.list_view.set_model(model)
+        print datetime.today(), "queue to show list view"
+        gobject.idle_add(caller.list_view.show)
+        print datetime.today(), "queue to show scrolled window"
+        gobject.idle_add(caller.scrolled_window.show)
+        print datetime.today(), "queue to destroy progress window"
+        gobject.idle_add(caller.progress_window.destroy)
+
+        print datetime.today(), "removing progress pulse"
+        gobject.source_remove(caller.progress_timeout_source_id)
+
+        self.finished = True
 
 if __name__ == "__main__":
     eksplorasi_dbf = EksplorasiDbf()
