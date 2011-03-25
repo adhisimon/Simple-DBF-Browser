@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>dbf.tables</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="dbf-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="dbf-module.html">Package&nbsp;dbf</a> ::
+        Module&nbsp;tables
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module tables</h1><p class="nomargin-top"><span class="codelink"><a href="dbf.tables-pysrc.html">source&nbsp;code</a></span></p>
+<p>table definitions</p>
+
+<!-- ==================== CLASSES ==================== -->
+<a name="section-Classes"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Classes</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Classes"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="dbf.tables.property-class.html" class="summary-name">property</a><br />
+      Emulate PyProperty_Type() in Objects/descrobject.c
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="dbf.tables._DbfRecord-class.html" class="summary-name" onclick="show_private();">_DbfRecord</a><br />
+      Provides routines to extract and save data within the fields of a 
+        dbf record.
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="dbf.tables._DbfMemo-class.html" class="summary-name" onclick="show_private();">_DbfMemo</a><br />
+      Provides access to memo fields as dictionaries must override _init,
+        _get_memo, and _put_memo to store memo contents to disk
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="dbf.tables._Db3Memo-class.html" class="summary-name" onclick="show_private();">_Db3Memo</a><br />
+      Provides access to memo fields as dictionaries must override _init,
+        _get_memo, and _put_memo to store memo contents to disk
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="dbf.tables._VfpMemo-class.html" class="summary-name" onclick="show_private();">_VfpMemo</a><br />
+      Provides access to memo fields as dictionaries must override _init,
+        _get_memo, and _put_memo to store memo contents to disk
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="dbf.tables.DbfTable-class.html" class="summary-name">DbfTable</a><br />
+      Provides a framework for dbf style tables.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="dbf.tables.Db3Table-class.html" class="summary-name">Db3Table</a><br />
+      Provides an interface for working with dBase III tables.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="dbf.tables.FpTable-class.html" class="summary-name">FpTable</a><br />
+      Provides an interface for working with FoxPro 2 tables
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="dbf.tables.VfpTable-class.html" class="summary-name">VfpTable</a><br />
+      Provides an interface for working with Visual FoxPro 6 tables
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="dbf.tables.List-class.html" class="summary-name">List</a><br />
+      list of Dbf records, with set-like behavior
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="dbf.tables.DbfCsv-class.html" class="summary-name">DbfCsv</a><br />
+      csv format for exporting tables
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="dbf.tables.Index-class.html" class="summary-name">Index</a>
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="dbf.tables._Db4Table-class.html" class="summary-name" onclick="show_private();">_Db4Table</a>
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Functions</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Functions"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="sql_select"></a><span class="summary-sig-name">sql_select</span>(<span class="summary-sig-arg">records</span>,
+        <span class="summary-sig-arg">chosen_fields</span>,
+        <span class="summary-sig-arg">condition</span>,
+        <span class="summary-sig-arg">field_names</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf.tables-pysrc.html#sql_select">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="sql_update"></a><span class="summary-sig-name">sql_update</span>(<span class="summary-sig-arg">records</span>,
+        <span class="summary-sig-arg">command</span>,
+        <span class="summary-sig-arg">condition</span>,
+        <span class="summary-sig-arg">field_names</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf.tables-pysrc.html#sql_update">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="sql_delete"></a><span class="summary-sig-name">sql_delete</span>(<span class="summary-sig-arg">records</span>,
+        <span class="summary-sig-arg">dead_fields</span>,
+        <span class="summary-sig-arg">condition</span>,
+        <span class="summary-sig-arg">field_names</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf.tables-pysrc.html#sql_delete">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="sql_recall"></a><span class="summary-sig-name">sql_recall</span>(<span class="summary-sig-arg">records</span>,
+        <span class="summary-sig-arg">all_fields</span>,
+        <span class="summary-sig-arg">condition</span>,
+        <span class="summary-sig-arg">field_names</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf.tables-pysrc.html#sql_recall">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="sql_add"></a><span class="summary-sig-name">sql_add</span>(<span class="summary-sig-arg">records</span>,
+        <span class="summary-sig-arg">new_fields</span>,
+        <span class="summary-sig-arg">condition</span>,
+        <span class="summary-sig-arg">field_names</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf.tables-pysrc.html#sql_add">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="sql_drop"></a><span class="summary-sig-name">sql_drop</span>(<span class="summary-sig-arg">records</span>,
+        <span class="summary-sig-arg">dead_fields</span>,
+        <span class="summary-sig-arg">condition</span>,
+        <span class="summary-sig-arg">field_names</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf.tables-pysrc.html#sql_drop">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="sql_pack"></a><span class="summary-sig-name">sql_pack</span>(<span class="summary-sig-arg">records</span>,
+        <span class="summary-sig-arg">command</span>,
+        <span class="summary-sig-arg">condition</span>,
+        <span class="summary-sig-arg">field_names</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf.tables-pysrc.html#sql_pack">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="sql_resize"></a><span class="summary-sig-name">sql_resize</span>(<span class="summary-sig-arg">records</span>,
+        <span class="summary-sig-arg">fieldname_newsize</span>,
+        <span class="summary-sig-arg">condition</span>,
+        <span class="summary-sig-arg">field_names</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf.tables-pysrc.html#sql_resize">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="sql_criteria"></a><span class="summary-sig-name">sql_criteria</span>(<span class="summary-sig-arg">records</span>,
+        <span class="summary-sig-arg">criteria</span>)</span><br />
+      creates a function matching the sql criteria</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf.tables-pysrc.html#sql_criteria">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="sql_cmd"></a><span class="summary-sig-name">sql_cmd</span>(<span class="summary-sig-arg">command</span>,
+        <span class="summary-sig-arg">field_names</span>)</span><br />
+      creates a function matching to apply command to each record in 
+      records</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf.tables-pysrc.html#sql_cmd">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="sql"></a><span class="summary-sig-name">sql</span>(<span class="summary-sig-arg">records</span>,
+        <span class="summary-sig-arg">command</span>)</span><br />
+      recognized sql commands are SELECT, UPDATE | REPLACE, DELETE, RECALL,
+      ADD, DROP</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf.tables-pysrc.html#sql">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_nop"></a><span class="summary-sig-name">_nop</span>(<span class="summary-sig-arg">value</span>)</span><br />
+      returns parameter unchanged</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf.tables-pysrc.html#_nop">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_normalize_tuples"></a><span class="summary-sig-name">_normalize_tuples</span>(<span class="summary-sig-arg">tuples</span>,
+        <span class="summary-sig-arg">length</span>,
+        <span class="summary-sig-arg">filler</span>)</span><br />
+      ensures each tuple is the same length, using filler[-missing] for the
+      gaps</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf.tables-pysrc.html#_normalize_tuples">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr class="private">
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="_codepage_lookup"></a><span class="summary-sig-name">_codepage_lookup</span>(<span class="summary-sig-arg">cp</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf.tables-pysrc.html#_codepage_lookup">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="ascii"></a><span class="summary-sig-name">ascii</span>(<span class="summary-sig-arg">new_setting</span>=<span class="summary-sig-default">None</span>)</span><br />
+      get/set return_ascii setting</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf.tables-pysrc.html#ascii">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="codepage"></a><span class="summary-sig-name">codepage</span>(<span class="summary-sig-arg">cp</span>=<span class="summary-sig-default">None</span>)</span><br />
+      get/set default codepage for any new tables</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf.tables-pysrc.html#codepage">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="encoding"></a><span class="summary-sig-name">encoding</span>(<span class="summary-sig-arg">cp</span>=<span class="summary-sig-default">None</span>)</span><br />
+      get/set default encoding for non-unicode strings passed into a table</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf.tables-pysrc.html#encoding">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="input_decoding"></a><span class="summary-name">input_decoding</span> = <code title="'cp1252'"><code class="variable-quote">'</code><code class="variable-string">cp1252</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="default_codepage"></a><span class="summary-name">default_codepage</span> = <code title="'cp1252'"><code class="variable-quote">'</code><code class="variable-string">cp1252</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="return_ascii"></a><span class="summary-name">return_ascii</span> = <code title="False">False</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="temp_dir"></a><span class="summary-name">temp_dir</span> = <code title="'c:\\Temp'"><code class="variable-quote">'</code><code class="variable-string">c:\\Temp</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="dbf.tables-module.html#version_map" class="summary-name">version_map</a> = <code title="{'\x02': 'FoxBASE',
+ '\x03': 'dBase III Plus',
+ '\x04': 'dBase IV',
+ '\x05': 'dBase V',
+ '0': 'Visual FoxPro',
+ '1': 'Visual FoxPro (auto increment field)',
+ 'C': 'dBase IV SQL',
+ '{': 'dBase IV w/memos',
+..."><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">\x02</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">FoxBASE</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">\x03</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">dBase III Plus</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">\</code><code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="dbf.tables-module.html#code_pages" class="summary-name">code_pages</a> = <code title="{'\x00': ('ascii', 'plain ol\' ascii'),
+ '\x01': ('cp437', 'U.S. MS-DOS'),
+ '\x02': ('cp850', 'International MS-DOS'),
+ '\x03': ('cp1252', 'Windows ANSI'),
+ '\x04': ('mac_roman', 'Standard Macintosh'),
+ '\x08': ('cp865', 'Danish OEM'),
+ '\t': ('cp437', 'Dutch OEM'),
+ '''
+..."><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">\x00</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">ascii</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">plain ol\' ascii</code><code class="variable-quote">'</code><code class="variable-group">)</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">\x01</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-group">(</code><code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="dbf.tables-module.html#sql_functions" class="summary-name">sql_functions</a> = <code title="{'select': sql_select, 'update': sql_update, 'replace': sql_update, 'i\
+nsert': None, 'delete': sql_delete, 'recall': sql_recall, 'add': sql_a\
+dd, 'drop': sql_drop, 'count': None, 'pack': sql_pack, 'resize': sql_r\
+esize,}">{'select': sql_select, 'update': sql_update, '<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+</table>
+<p class="indent-wrapped-lines"><b>Imports:</b>
+  <span title="os">os</span>,
+  <span title="sys">sys</span>,
+  <span title="csv">csv</span>,
+  <span title="codecs">codecs</span>,
+  <span title="locale">locale</span>,
+  <span title="unicodedata">unicodedata</span>,
+  <span title="weakref">weakref</span>,
+  <span title="array.array">array</span>,
+  <span title="bisect.bisect_left">bisect_left</span>,
+  <span title="bisect.bisect_right">bisect_right</span>,
+  <span title="decimal.Decimal">Decimal</span>,
+  <span title="shutil.copyfileobj">copyfileobj</span>,
+  <a href="dbf-module.html" title="dbf">dbf</a>,
+  <a href="dbf._io-module.html" title="dbf._io">io</a>,
+  <a href="dbf.dates.Date-class.html" title="dbf.dates.Date">Date</a>,
+  <a href="dbf.dates.DateTime-class.html" title="dbf.dates.DateTime">DateTime</a>,
+  <a href="dbf.dates.Time-class.html" title="dbf.dates.Time">Time</a>,
+  <a href="dbf.exceptions.Bof-class.html" title="dbf.exceptions.Bof">Bof</a>,
+  <a href="dbf.exceptions.Eof-class.html" title="dbf.exceptions.Eof">Eof</a>,
+  <a href="dbf.exceptions.DbfError-class.html" title="dbf.exceptions.DbfError">DbfError</a>,
+  <a href="dbf.exceptions.DataOverflow-class.html" title="dbf.exceptions.DataOverflow">DataOverflow</a>,
+  <a href="dbf.exceptions.FieldMissing-class.html" title="dbf.exceptions.FieldMissing">FieldMissing</a>,
+  <a href="dbf.exceptions.NonUnicode-class.html" title="dbf.exceptions.NonUnicode">NonUnicode</a>,
+  <a href="dbf.exceptions.DoNotIndex-class.html" title="dbf.exceptions.DoNotIndex">DoNotIndex</a>
+</p><br />
+<!-- ==================== VARIABLES DETAILS ==================== -->
+<a name="section-VariablesDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-VariablesDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="version_map"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">version_map</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">\x02</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">FoxBASE</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">\x03</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">dBase III Plus</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">\x04</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">dBase IV</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">\x05</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">dBase V</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">0</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">Visual FoxPro</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">1</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">Visual FoxPro (auto increment field)</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">C</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">dBase IV SQL</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">{</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">dBase IV w/memos</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+<code class="variable-ellipsis">...</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="code_pages"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">code_pages</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">\x00</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">ascii</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">plain ol\' ascii</code><code class="variable-quote">'</code><code class="variable-group">)</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">\x01</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">cp437</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">U.S. MS-DOS</code><code class="variable-quote">'</code><code class="variable-group">)</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">\x02</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">cp850</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">International MS-DOS</code><code class="variable-quote">'</code><code class="variable-group">)</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">\x03</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">cp1252</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">Windows ANSI</code><code class="variable-quote">'</code><code class="variable-group">)</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">\x04</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">mac_roman</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">Standard Macintosh</code><code class="variable-quote">'</code><code class="variable-group">)</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">\x08</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">cp865</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">Danish OEM</code><code class="variable-quote">'</code><code class="variable-group">)</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">\t</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-group">(</code><code class="variable-quote">'</code><code class="variable-string">cp437</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">Dutch OEM</code><code class="variable-quote">'</code><code class="variable-group">)</code><code class="variable-op">,</code>
+ <code class="variable-quote">'''</code><code class="variable-string"></code>
+<code class="variable-ellipsis">...</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="sql_functions"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">sql_functions</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+{'select': sql_select, 'update': sql_update, 'replace': sql_update, 'i<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+nsert': None, 'delete': sql_delete, 'recall': sql_recall, 'add': sql_a<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+dd, 'drop': sql_drop, 'count': None, 'pack': sql_pack, 'resize': sql_r<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+esize,}
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="dbf-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu Mar 10 11:56:28 2011
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>

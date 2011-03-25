@@ -1,0 +1,899 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>dbf._io</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="dbf-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="dbf-module.html">Package&nbsp;dbf</a> ::
+        Module&nbsp;_io
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module _io</h1><p class="nomargin-top"><span class="codelink"><a href="dbf._io-pysrc.html">source&nbsp;code</a></span></p>
+<p>Routines for saving, retrieving, and creating fields</p>
+
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Functions</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Functions"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="packShortInt"></a><span class="summary-sig-name">packShortInt</span>(<span class="summary-sig-arg">value</span>,
+        <span class="summary-sig-arg">bigendian</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Returns a two-bye integer from the value, or raises DbfError</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#packShortInt">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="packLongInt"></a><span class="summary-sig-name">packLongInt</span>(<span class="summary-sig-arg">value</span>,
+        <span class="summary-sig-arg">bigendian</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Returns a four-bye integer from the value, or raises DbfError</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#packLongInt">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="packDate"></a><span class="summary-sig-name">packDate</span>(<span class="summary-sig-arg">date</span>)</span><br />
+      Returns a group of three bytes, in integer form, of the date</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#packDate">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="packStr"></a><span class="summary-sig-name">packStr</span>(<span class="summary-sig-arg">string</span>)</span><br />
+      Returns an 11 byte, upper-cased, null padded string suitable for 
+      field names; raises DbfError if the string is bigger than 10 bytes</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#packStr">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="unpackShortInt"></a><span class="summary-sig-name">unpackShortInt</span>(<span class="summary-sig-arg">bytes</span>,
+        <span class="summary-sig-arg">bigendian</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Returns the value in the two-byte integer passed in</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#unpackShortInt">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="unpackLongInt"></a><span class="summary-sig-name">unpackLongInt</span>(<span class="summary-sig-arg">bytes</span>,
+        <span class="summary-sig-arg">bigendian</span>=<span class="summary-sig-default">False</span>)</span><br />
+      Returns the value in the four-byte integer passed in</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#unpackLongInt">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="unpackDate"></a><span class="summary-sig-name">unpackDate</span>(<span class="summary-sig-arg">bytestr</span>)</span><br />
+      Returns a Date() of the packed three-byte date passed in</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#unpackDate">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="unpackStr"></a><span class="summary-sig-name">unpackStr</span>(<span class="summary-sig-arg">chars</span>)</span><br />
+      Returns a normal, lower-cased string from a null-padded byte string</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#unpackStr">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="convertToBool"></a><span class="summary-sig-name">convertToBool</span>(<span class="summary-sig-arg">value</span>)</span><br />
+      Returns boolean true or false; normal rules apply to non-string 
+      values; string values must be 'y','t', 'yes', or 'true' (case 
+      insensitive) to be True</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#convertToBool">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="unsupportedType"></a><span class="summary-sig-name">unsupportedType</span>(<span class="summary-sig-arg">something</span>,
+        <span class="summary-sig-arg">field</span>,
+        <span class="summary-sig-arg">memo</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">typ</span>=<span class="summary-sig-default">None</span>)</span><br />
+      called if a data type is not supported for that style of table</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#unsupportedType">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="retrieveCharacter"></a><span class="summary-sig-name">retrieveCharacter</span>(<span class="summary-sig-arg">bytes</span>,
+        <span class="summary-sig-arg">fielddef</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="summary-sig-arg">memo</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">typ</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Returns the string in bytes with trailing white space removed</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#retrieveCharacter">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="updateCharacter"></a><span class="summary-sig-name">updateCharacter</span>(<span class="summary-sig-arg">string</span>,
+        <span class="summary-sig-arg">fielddef</span>,
+        <span class="summary-sig-arg">memo</span>=<span class="summary-sig-default">None</span>)</span><br />
+      returns the string, truncating if string is longer than it's field</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#updateCharacter">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="retrieveCurrency"></a><span class="summary-sig-name">retrieveCurrency</span>(<span class="summary-sig-arg">bytes</span>,
+        <span class="summary-sig-arg">fielddef</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="summary-sig-arg">memo</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">typ</span>=<span class="summary-sig-default">None</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#retrieveCurrency">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="updateCurrency"></a><span class="summary-sig-name">updateCurrency</span>(<span class="summary-sig-arg">value</span>,
+        <span class="summary-sig-arg">fielddef</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="summary-sig-arg">memo</span>=<span class="summary-sig-default">None</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#updateCurrency">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="retrieveDate"></a><span class="summary-sig-name">retrieveDate</span>(<span class="summary-sig-arg">bytes</span>,
+        <span class="summary-sig-arg">fielddef</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="summary-sig-arg">memo</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Returns the ascii coded date as a Date object</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#retrieveDate">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="updateDate"></a><span class="summary-sig-name">updateDate</span>(<span class="summary-sig-arg">moment</span>,
+        <span class="summary-sig-arg">fielddef</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="summary-sig-arg">memo</span>=<span class="summary-sig-default">None</span>)</span><br />
+      returns the Date or datetime.date object ascii-encoded (yyyymmdd)</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#updateDate">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="retrieveDouble"></a><span class="summary-sig-name">retrieveDouble</span>(<span class="summary-sig-arg">bytes</span>,
+        <span class="summary-sig-arg">fielddef</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="summary-sig-arg">memo</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">typ</span>=<span class="summary-sig-default">None</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#retrieveDouble">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="updateDouble"></a><span class="summary-sig-name">updateDouble</span>(<span class="summary-sig-arg">value</span>,
+        <span class="summary-sig-arg">fielddef</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="summary-sig-arg">memo</span>=<span class="summary-sig-default">None</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#updateDouble">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="retrieveInteger"></a><span class="summary-sig-name">retrieveInteger</span>(<span class="summary-sig-arg">bytes</span>,
+        <span class="summary-sig-arg">fielddef</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="summary-sig-arg">memo</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">typ</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Returns the binary number stored in bytes in little-endian format</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#retrieveInteger">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="updateInteger"></a><span class="summary-sig-name">updateInteger</span>(<span class="summary-sig-arg">value</span>,
+        <span class="summary-sig-arg">fielddef</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="summary-sig-arg">memo</span>=<span class="summary-sig-default">None</span>)</span><br />
+      returns value in little-endian binary format</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#updateInteger">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="retrieveLogical"></a><span class="summary-sig-name">retrieveLogical</span>(<span class="summary-sig-arg">bytes</span>,
+        <span class="summary-sig-arg">fielddef</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="summary-sig-arg">memo</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Returns True if bytes is 't', 'T', 'y', or 'Y', None if '?', and 
+      False otherwise</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#retrieveLogical">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="updateLogical"></a><span class="summary-sig-name">updateLogical</span>(<span class="summary-sig-arg">logical</span>,
+        <span class="summary-sig-arg">fielddef</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="summary-sig-arg">memo</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Returs 'T' if logical is True, 'F' otherwise</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#updateLogical">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="retrieveMemo"></a><span class="summary-sig-name">retrieveMemo</span>(<span class="summary-sig-arg">bytes</span>,
+        <span class="summary-sig-arg">fielddef</span>,
+        <span class="summary-sig-arg">memo</span>,
+        <span class="summary-sig-arg">typ</span>)</span><br />
+      Returns the block of data from a memo file</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#retrieveMemo">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="updateMemo"></a><span class="summary-sig-name">updateMemo</span>(<span class="summary-sig-arg">string</span>,
+        <span class="summary-sig-arg">fielddef</span>,
+        <span class="summary-sig-arg">memo</span>)</span><br />
+      Writes string as a memo, returns the block number it was saved into</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#updateMemo">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="retrieveNumeric"></a><span class="summary-sig-name">retrieveNumeric</span>(<span class="summary-sig-arg">bytes</span>,
+        <span class="summary-sig-arg">fielddef</span>,
+        <span class="summary-sig-arg">memo</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">typ</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Returns the number stored in bytes as integer if field spec for 
+      decimals is 0, float otherwise</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#retrieveNumeric">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="updateNumeric"></a><span class="summary-sig-name">updateNumeric</span>(<span class="summary-sig-arg">value</span>,
+        <span class="summary-sig-arg">fielddef</span>,
+        <span class="summary-sig-arg">memo</span>=<span class="summary-sig-default">None</span>)</span><br />
+      returns value as ascii representation, rounding decimal portion as 
+      necessary</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#updateNumeric">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="retrieveVfpDateTime"></a><span class="summary-sig-name">retrieveVfpDateTime</span>(<span class="summary-sig-arg">bytes</span>,
+        <span class="summary-sig-arg">fielddef</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="summary-sig-arg">memo</span>=<span class="summary-sig-default">None</span>)</span><br />
+      returns the date/time stored in bytes; dates &lt;= 01/01/1981 
+      00:00:00 may not be accurate;  BC dates are nulled.</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#retrieveVfpDateTime">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="updateVfpDateTime"></a><span class="summary-sig-name">updateVfpDateTime</span>(<span class="summary-sig-arg">moment</span>,
+        <span class="summary-sig-arg">fielddef</span>=<span class="summary-sig-default"><code class="variable-group">{</code><code class="variable-group">}</code></span>,
+        <span class="summary-sig-arg">memo</span>=<span class="summary-sig-default">None</span>)</span><br />
+      sets the date/time stored in moment moment must have fields year, 
+      month, day, hour, minute, second, microsecond</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#updateVfpDateTime">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="retrieveVfpMemo"></a><span class="summary-sig-name">retrieveVfpMemo</span>(<span class="summary-sig-arg">bytes</span>,
+        <span class="summary-sig-arg">fielddef</span>,
+        <span class="summary-sig-arg">memo</span>,
+        <span class="summary-sig-arg">typ</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Returns the block of data from a memo file</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#retrieveVfpMemo">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="updateVfpMemo"></a><span class="summary-sig-name">updateVfpMemo</span>(<span class="summary-sig-arg">string</span>,
+        <span class="summary-sig-arg">fielddef</span>,
+        <span class="summary-sig-arg">memo</span>)</span><br />
+      Writes string as a memo, returns the block number it was saved into</td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#updateVfpMemo">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="addCharacter"></a><span class="summary-sig-name">addCharacter</span>(<span class="summary-sig-arg">format</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#addCharacter">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="addDate"></a><span class="summary-sig-name">addDate</span>(<span class="summary-sig-arg">format</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#addDate">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="addLogical"></a><span class="summary-sig-name">addLogical</span>(<span class="summary-sig-arg">format</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#addLogical">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="addMemo"></a><span class="summary-sig-name">addMemo</span>(<span class="summary-sig-arg">format</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#addMemo">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="addNumeric"></a><span class="summary-sig-name">addNumeric</span>(<span class="summary-sig-arg">format</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#addNumeric">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="addVfpCurrency"></a><span class="summary-sig-name">addVfpCurrency</span>(<span class="summary-sig-arg">format</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#addVfpCurrency">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="addVfpDateTime"></a><span class="summary-sig-name">addVfpDateTime</span>(<span class="summary-sig-arg">format</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#addVfpDateTime">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="addVfpDouble"></a><span class="summary-sig-name">addVfpDouble</span>(<span class="summary-sig-arg">format</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#addVfpDouble">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="addVfpInteger"></a><span class="summary-sig-name">addVfpInteger</span>(<span class="summary-sig-arg">format</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#addVfpInteger">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="addVfpMemo"></a><span class="summary-sig-name">addVfpMemo</span>(<span class="summary-sig-arg">format</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#addVfpMemo">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="addVfpNumeric"></a><span class="summary-sig-name">addVfpNumeric</span>(<span class="summary-sig-arg">format</span>)</span></td>
+          <td align="right" valign="top">
+            <span class="codelink"><a href="dbf._io-pysrc.html#addVfpNumeric">source&nbsp;code</a></span>
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Variables</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-Variables"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="VFPTIME"></a><span class="summary-name">VFPTIME</span> = <code title="1721425">1721425</code>
+    </td>
+  </tr>
+</table>
+<p class="indent-wrapped-lines"><b>Imports:</b>
+  <span title="struct">struct</span>,
+  <span title="decimal.Decimal">Decimal</span>,
+  <a href="dbf.exceptions.DbfError-class.html" title="dbf.exceptions.DbfError">DbfError</a>,
+  <a href="dbf.exceptions.DataOverflow-class.html" title="dbf.exceptions.DataOverflow">DataOverflow</a>,
+  <a href="dbf.dates.Date-class.html" title="dbf.dates.Date">Date</a>,
+  <a href="dbf.dates.DateTime-class.html" title="dbf.dates.DateTime">DateTime</a>,
+  <a href="dbf.dates.Time-class.html" title="dbf.dates.Time">Time</a>,
+  <span title="math.floor">floor</span>
+</p><br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="dbf-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Thu Mar 10 11:56:28 2011
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
