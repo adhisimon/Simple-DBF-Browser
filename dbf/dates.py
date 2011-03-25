@@ -8,7 +8,7 @@ class Date(object):
     "adds null capable datetime.date constructs"
     __slots__ = ['_date']
     def __new__(cls, year=None, month=0, day=0):
-        """date should be either a datetime.date, a string in yyyymmdd format, 
+        """date should be either a datetime.date, a string in yyyymmdd format,
         or date/month/day should all be appropriate integers"""
         nd = object.__new__(cls)
         nd._date = False
@@ -169,7 +169,11 @@ class Date(object):
     @classmethod
     def fromordinal(cls, number):
         if number:
-            return cls(datetime.date.fromordinal(number))
+            try:
+                retval_cls = cls(datetime.date.fromordinal(number))
+            except:
+                retval_cls = cls(datetime.date.fromordinal(1))
+            return retval_cls
         return cls()
     @classmethod
     def fromtimestamp(cls, timestamp):
@@ -361,7 +365,7 @@ class DateTime(object):
         if yo:
             return yo._datetime
         return None
-    @classmethod    
+    @classmethod
     def fromordinal(cls, number):
         if number:
             return cls(datetime.datetime.fromordinal(number))
@@ -397,7 +401,10 @@ class Time(object):
         elif type(hour) == Time:
             nt._time = hour._time
         elif hour is not None:
-            nt._time = datetime.time(hour, minute, second, microsec)
+            try:
+                nt._time = datetime.time(hour, minute, second, microsec)
+            except:
+                nt._time = datetime.time(0, minute, second, microsec)
         return nt
     def __add__(yo, other):
         if yo and type(other) == datetime.timedelta:
