@@ -16,7 +16,7 @@ gobject.threads_init()
 
 class EksplorasiDbf:
     main_title = "Simple DBF Browser"
-    version = "1.0.0-20110325_1729"
+    version = "1.0.0-20110326_0036"
 
     window = None
     content_box = None
