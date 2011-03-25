@@ -11,6 +11,7 @@ import dbf
 import os.path
 from datetime import datetime
 import time
+import os
 
 gobject.threads_init()
 
@@ -29,6 +30,9 @@ class EksplorasiDbf:
     progress_message = None
 
     def __init__(self):
+        if os.name == 'nt':
+            gtk.rc_parse("gtkrc")
+
         self.window = gtk.Window(gtk.WINDOW_TOPLEVEL)
         self.window.set_title(self.main_title)
         self.window.set_size_request(500,400)

@@ -14,7 +14,10 @@
    id="svg3832"
    version="1.1"
    inkscape:version="0.47 r22583"
-   sodipodi:docname="New document 2">
+   sodipodi:docname="logo.svg"
+   inkscape:export-filename="/home/adhisimon/Projects/simpledbfbrowser/resources/logo.png"
+   inkscape:export-xdpi="68.75"
+   inkscape:export-ydpi="68.75">
   <defs
      id="defs3834">
     <inkscape:perspective
@@ -66,81 +69,117 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       id="rect4415"
+       width="654.5788"
+       height="121.21832"
+       x="48.487324"
+       y="694.6261" />
     <g
-       id="g3865"
-       transform="translate(203.14286,220.56988)">
+       id="g4417"
+       transform="translate(3.2227108,2.303195)">
       <g
-         inkscape:export-ydpi="72.310707"
-         inkscape:export-xdpi="72.310707"
-         inkscape:export-filename="/home/adhisimon/Documents/MTS/logo-mts-h64.png"
-         transform="matrix(87.540527,0,0,87.540527,170.78281,171.30477)"
-         id="g3335"
-         style="fill-rule:evenodd">
-        <path
-           style="font-size:0.44444445px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#0093dd;fill-rule:evenodd;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L Bold"
-           d="m 139.6875,365.9375 c -21.98552,0 -39.812503,17.85824 -39.8125,39.84375 0,21.98552 17.82697,39.81249 39.8125,39.8125 12.39142,0 23.44331,-5.67919 30.75,-14.5625 -1.09806,0.36846 -2.40028,0.56249 -3.90625,0.5625 -5.74265,0 -8.76619,-2.1806 -8.90625,-6.3125 l 4.78125,0 c 0.2101,1.01547 0.41225,1.42731 0.9375,1.8125 0.63029,0.42019 1.64567,0.65626 2.90625,0.65625 2.27605,0 3.65624,-0.68823 3.65625,-1.84375 0,-0.77036 -0.43069,-1.17731 -1.65625,-1.5625 l -5.84375,-1.8125 c -1.82084,-0.59527 -2.42844,-0.89721 -3.09375,-1.5625 -0.66531,-0.73534 -1.03124,-1.83316 -1.03125,-3.09375 0,-3.8868 2.98403,-6.31249 7.78125,-6.3125 5.07735,0 8.14872,2.41439 8.21875,6.40625 l -4.71875,0 c -0.035,-1.71579 -1.18516,-2.56251 -3.53125,-2.5625 -1.71579,0 -2.84376,0.73077 -2.84375,1.78125 0,0.77036 0.35312,1.04857 1.71875,1.46875 l 6.1875,1.78125 c 2.29764,0.67958 3.51555,2.07598 3.6875,4.21875 3.03381,-5.62006 4.75,-12.04438 4.75,-18.875 0,-21.98552 -17.85824,-39.84375 -39.84375,-39.84375 z m 8.125,41.25 4.90625,0 0,5.09375 2.71875,0 0,3.25 -2.71875,0 0,10.28125 c 0,1.68078 0.29816,2.0625 1.59375,2.0625 0.35016,0 0.63477,-0.0237 1.125,-0.0937 l 0,3.4375 c -0.8754,0.28013 -1.75825,0.37499 -2.84375,0.375 -3.22149,0 -4.78126,-1.46111 -4.78125,-4.4375 l 0,-11.625 -2.40625,0 0,-3.25 2.40625,0 0,-5.09375 z m -21.875,4.375 c 2.34608,0 4.24584,1.02668 5.15625,2.8125 1.47068,-1.96091 3.15016,-2.81249 5.53125,-2.8125 3.78175,0 6,2.16705 6,5.84375 l 0,13.375 -4.875,0 0,-12.59375 c 0,-1.5057 -1.04174,-2.43749 -2.6875,-2.4375 -2.10097,0 -3.34375,1.37643 -3.34375,3.6875 l 0,11.34375 -4.90625,0 0,-12.59375 c 0,-1.5057 -1.01049,-2.43749 -2.65625,-2.4375 -2.10097,0 -3.375,1.37643 -3.375,3.6875 l 0,11.34375 -4.90625,0 0,-18.90625 4.875,0 0,2.34375 c 1.61074,-1.92589 3.0165,-2.65624 5.1875,-2.65625 z"
-           transform="matrix(0.01142328,0,0,0.01142328,0,-0.5107142)"
-           id="circle5050"
-           inkscape:export-filename="/media/BUNDATAMA/logo-mts.png"
-           inkscape:export-xdpi="144.61876"
-           inkscape:export-ydpi="144.61876" />
-        <text
-           xml:space="preserve"
-           style="font-size:0.3272101px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#0093dd;fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L Bold"
-           x="2.0941181"
-           y="3.9348509"
-           id="text5058"
-           sodipodi:linespacing="100%"
-           transform="scale(0.9951561,1.0048675)"
-           inkscape:export-filename="/media/BUNDATAMA/logo-mts.png"
-           inkscape:export-xdpi="144.61876"
-           inkscape:export-ydpi="144.61876"><tspan
-             sodipodi:role="line"
-             x="2.0941181"
+         transform="translate(203.14286,220.56988)"
+         id="g3865">
+        <g
+           style="fill-rule:evenodd"
+           id="g3335"
+           transform="matrix(87.540527,0,0,87.540527,170.78281,171.30477)"
+           inkscape:export-filename="/home/adhisimon/Documents/MTS/logo-mts-h64.png"
+           inkscape:export-xdpi="72.310707"
+           inkscape:export-ydpi="72.310707">
+          <path
+             inkscape:export-ydpi="144.61876"
+             inkscape:export-xdpi="144.61876"
+             inkscape:export-filename="/media/BUNDATAMA/logo-mts.png"
+             id="circle5050"
+             transform="matrix(0.01142328,0,0,0.01142328,0,-0.5107142)"
+             d="m 139.6875,365.9375 c -21.98552,0 -39.812503,17.85824 -39.8125,39.84375 0,21.98552 17.82697,39.81249 39.8125,39.8125 12.39142,0 23.44331,-5.67919 30.75,-14.5625 -1.09806,0.36846 -2.40028,0.56249 -3.90625,0.5625 -5.74265,0 -8.76619,-2.1806 -8.90625,-6.3125 l 4.78125,0 c 0.2101,1.01547 0.41225,1.42731 0.9375,1.8125 0.63029,0.42019 1.64567,0.65626 2.90625,0.65625 2.27605,0 3.65624,-0.68823 3.65625,-1.84375 0,-0.77036 -0.43069,-1.17731 -1.65625,-1.5625 l -5.84375,-1.8125 c -1.82084,-0.59527 -2.42844,-0.89721 -3.09375,-1.5625 -0.66531,-0.73534 -1.03124,-1.83316 -1.03125,-3.09375 0,-3.8868 2.98403,-6.31249 7.78125,-6.3125 5.07735,0 8.14872,2.41439 8.21875,6.40625 l -4.71875,0 c -0.035,-1.71579 -1.18516,-2.56251 -3.53125,-2.5625 -1.71579,0 -2.84376,0.73077 -2.84375,1.78125 0,0.77036 0.35312,1.04857 1.71875,1.46875 l 6.1875,1.78125 c 2.29764,0.67958 3.51555,2.07598 3.6875,4.21875 3.03381,-5.62006 4.75,-12.04438 4.75,-18.875 0,-21.98552 -17.85824,-39.84375 -39.84375,-39.84375 z m 8.125,41.25 4.90625,0 0,5.09375 2.71875,0 0,3.25 -2.71875,0 0,10.28125 c 0,1.68078 0.29816,2.0625 1.59375,2.0625 0.35016,0 0.63477,-0.0237 1.125,-0.0937 l 0,3.4375 c -0.8754,0.28013 -1.75825,0.37499 -2.84375,0.375 -3.22149,0 -4.78126,-1.46111 -4.78125,-4.4375 l 0,-11.625 -2.40625,0 0,-3.25 2.40625,0 0,-5.09375 z m -21.875,4.375 c 2.34608,0 4.24584,1.02668 5.15625,2.8125 1.47068,-1.96091 3.15016,-2.81249 5.53125,-2.8125 3.78175,0 6,2.16705 6,5.84375 l 0,13.375 -4.875,0 0,-12.59375 c 0,-1.5057 -1.04174,-2.43749 -2.6875,-2.4375 -2.10097,0 -3.34375,1.37643 -3.34375,3.6875 l 0,11.34375 -4.90625,0 0,-12.59375 c 0,-1.5057 -1.01049,-2.43749 -2.65625,-2.4375 -2.10097,0 -3.375,1.37643 -3.375,3.6875 l 0,11.34375 -4.90625,0 0,-18.90625 4.875,0 0,2.34375 c 1.61074,-1.92589 3.0165,-2.65624 5.1875,-2.65625 z"
+             style="font-size:0.44444445px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#0093dd;fill-rule:evenodd;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L Bold" />
+          <text
+             inkscape:export-ydpi="144.61876"
+             inkscape:export-xdpi="144.61876"
+             inkscape:export-filename="/media/BUNDATAMA/logo-mts.png"
+             transform="scale(0.9951561,1.0048675)"
+             sodipodi:linespacing="100%"
+             id="text5058"
              y="3.9348509"
-             id="tspan5060">mondial</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-size:0.3272101px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#0093dd;fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L Bold"
-           x="2.1097441"
-           y="4.1909695"
-           id="text5062"
-           sodipodi:linespacing="100%"
-           transform="scale(0.9951561,1.0048675)"
-           inkscape:export-filename="/media/BUNDATAMA/logo-mts.png"
-           inkscape:export-xdpi="144.61876"
-           inkscape:export-ydpi="144.61876"><tspan
-             sodipodi:role="line"
-             x="2.1097441"
+             x="2.0941181"
+             style="font-size:0.3272101px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#0093dd;fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L Bold"
+             xml:space="preserve"><tspan
+               id="tspan5060"
+               y="3.9348509"
+               x="2.0941181"
+               sodipodi:role="line">mondial</tspan></text>
+          <text
+             inkscape:export-ydpi="144.61876"
+             inkscape:export-xdpi="144.61876"
+             inkscape:export-filename="/media/BUNDATAMA/logo-mts.png"
+             transform="scale(0.9951561,1.0048675)"
+             sodipodi:linespacing="100%"
+             id="text5062"
              y="4.1909695"
-             id="tspan5064">teknologi</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-size:0.3272101px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#0093dd;fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L Bold"
-           x="2.0924888"
-           y="4.4524693"
-           id="text5066"
-           sodipodi:linespacing="100%"
-           transform="scale(0.9951561,1.0048675)"
-           inkscape:export-filename="/media/BUNDATAMA/logo-mts.png"
-           inkscape:export-xdpi="144.61876"
-           inkscape:export-ydpi="144.61876"><tspan
-             sodipodi:role="line"
-             x="2.0924888"
+             x="2.1097441"
+             style="font-size:0.3272101px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#0093dd;fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L Bold"
+             xml:space="preserve"><tspan
+               id="tspan5064"
+               y="4.1909695"
+               x="2.1097441"
+               sodipodi:role="line">teknologi</tspan></text>
+          <text
+             inkscape:export-ydpi="144.61876"
+             inkscape:export-xdpi="144.61876"
+             inkscape:export-filename="/media/BUNDATAMA/logo-mts.png"
+             transform="scale(0.9951561,1.0048675)"
+             sodipodi:linespacing="100%"
+             id="text5066"
              y="4.4524693"
-             id="tspan5068">solusi</tspan></text>
+             x="2.0924888"
+             style="font-size:0.3272101px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:100%;writing-mode:lr-tb;text-anchor:start;fill:#0093dd;fill-opacity:1;fill-rule:evenodd;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L Bold"
+             xml:space="preserve"><tspan
+               id="tspan5068"
+               y="4.4524693"
+               x="2.0924888"
+               sodipodi:role="line">solusi</tspan></text>
+        </g>
       </g>
+      <text
+         id="text4390"
+         y="742.08832"
+         x="61.470623"
+         style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         xml:space="preserve"><tspan
+           style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans Bold"
+           y="742.08832"
+           x="61.470623"
+           id="tspan4392"
+           sodipodi:role="line">Simple DBF Browser</tspan></text>
     </g>
+    <rect
+       style="fill:#0000ff;fill-opacity:1;stroke:none"
+       id="rect4436"
+       width="125.25892"
+       height="125.25892"
+       x="135.13683"
+       y="190.63129"
+       ry="36.36549"
+       inkscape:export-filename="/home/adhisimon/Projects/simpledbfbrowser/resources/icon.png"
+       inkscape:export-xdpi="45.98"
+       inkscape:export-ydpi="45.98" />
     <text
        xml:space="preserve"
-       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="61.470623"
-       y="784.45941"
-       id="text4390"><tspan
+       style="font-size:56;font-style:normal;font-weight:normal;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="139.40105"
+       y="272.52441"
+       id="text4430"
+       inkscape:export-filename="/home/adhisimon/Projects/simpledbfbrowser/resources/icon.png"
+       inkscape:export-xdpi="45.98"
+       inkscape:export-ydpi="45.98"><tspan
          sodipodi:role="line"
-         id="tspan4392"
-         x="61.470623"
-         y="784.45941"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans Bold">Simple DBF Browser</tspan></text>
+         id="tspan4432"
+         x="139.40105"
+         y="272.52441"
+         style="font-weight:bold;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans Bold;font-size:56">DBF</tspan></text>
   </g>
 </svg>
