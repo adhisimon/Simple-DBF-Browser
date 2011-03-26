@@ -12,6 +12,7 @@ import os.path
 from datetime import datetime
 import time
 import os
+import string
 
 gobject.threads_init()
 
@@ -194,11 +195,12 @@ class EksplorasiDbf:
 
     def progress_bar_timeout(self):
         if self.row_count:
-            self.progress_bar_update_status('%s: %d rows' % (os.path.basename(self.dbf_file), self.row_count))
+            self.progress_bar_update_status('%s: %d / %d rows' % (os.path.basename(self.dbf_file), self.row_count, self.dbf_length))
 
             if self.row_count and self.dbf_table and self.dbf_length:
                 progress_fraction = 1.0 * self.row_count / self.dbf_length
                 self.progress_bar.set_fraction(progress_fraction)
+                self.progress_bar.set_text("{0:.0f}%".format(progress_fraction * 100))
             else:
                 self.progress_bar.pulse()
 
