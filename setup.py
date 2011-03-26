@@ -7,7 +7,7 @@ exe = Executable(
 )
 setup(
     name = "SimpleDBFBrowser",
-    version = "1.0.0-20110326_0146",
+    version = "1.0.1-20110327_0154",
     description = "Simple DBF Browser",
     executables = [exe],
     options = {
