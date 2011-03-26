@@ -18,7 +18,7 @@ from readdbf import ReadDbf
 
 gobject.threads_init()
 
-class EksplorasiDbf:
+class SimpleDbfBrowser:
     main_title = "Simple DBF Browser"
     version = "1.0.1-20110327_0208"
 
@@ -269,5 +269,5 @@ All rights reserved.
         return
 
 if __name__ == "__main__":
-    eksplorasi_dbf = EksplorasiDbf()
-    eksplorasi_dbf.main()
+    main_app = SimpleDbfBrowser()
+    main_app.main()

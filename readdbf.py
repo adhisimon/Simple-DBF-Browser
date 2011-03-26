@@ -103,6 +103,6 @@ class ReadDbf(threading.Thread):
         self.finished = True
 
 if __name__ == "__main__":
-    from simpledbfbrowser import EksplorasiDbf
-    eksplorasi_dbf = EksplorasiDbf()
-    eksplorasi_dbf.main()
+    from simpledbfbrowser import SimpleDbfBrowser
+    main_app = SimpleDbfBrowser()
+    main_app.main()
