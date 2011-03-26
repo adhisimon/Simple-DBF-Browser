@@ -25,6 +25,7 @@ class SimpleDbfBrowser:
     window = None
     content_box = None
     scrolled_window = None
+    statusbar = None
     list_view = None
     dbf_file = None
     dbf_table = None
@@ -59,6 +60,10 @@ class SimpleDbfBrowser:
         self.content_box.show()
 
         self.vbox.pack_start(self.content_box, True, True, 0)
+
+        self.statusbar = gtk.Statusbar()
+        self.statusbar.show()
+        self.vbox.pack_start(self.statusbar, False, True, 0)
 
         self.window.connect("delete_event", gtk.main_quit)
 

@@ -1,0 +1,199 @@
+commit 46c3fcf02f5d70ecd1ad9a62af460735ec7f2dba
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sun Mar 27 02:47:49 2011 +0700
+
+    grammar fixed on readme
+
+commit 76b63adffebeb58280eb2ef6988c5469e78d15fb
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sun Mar 27 02:46:06 2011 +0700
+
+    change class name from EksplorasiDbf to SimpleDbfBrowser
+
+commit c8b753878a3ad0f0d1c6df6f8ed513fecdf9591f
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sun Mar 27 02:42:01 2011 +0700
+
+    move ReadDbf to new package
+
+commit d7114e18514710b758b1baa789aaab5bfa1acbef
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sun Mar 27 02:08:59 2011 +0700
+
+    v1.0.1-20110327_0208
+    
+    Change win32 setup file name to simpledbfbrowser-win32-VERSION_NUMBER
+
+commit c36f1e1d4d1a9e480bbb7e72c6ba5d8c55113797
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sun Mar 27 01:55:57 2011 +0700
+
+    v1.0.1-20110327_0154
+
+commit 57e8849764613e9a03186d884d45b48c55a1b965
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sun Mar 27 01:52:22 2011 +0700
+
+    detail progress information
+
+commit 8b9ee1ddf3e8d1e16c5c19be33becb6f2e69fc40
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sun Mar 27 01:36:03 2011 +0700
+
+    dbf length property
+
+commit 68c9669041f6272cb64e088f3c881eeb5136a7f8
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sun Mar 27 01:33:27 2011 +0700
+
+    removing some debug
+
+commit e0c23c2e62659a991c21366d640ce0998f20f910
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sun Mar 27 01:27:12 2011 +0700
+
+    unset model before destroyting scrolled window
+
+commit de52cbbf8b6a00e129e74cd6a2c6eaf2af2f9263
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sun Mar 27 01:10:03 2011 +0700
+
+    progress fraction status
+
+commit aa5d4be49ab1b4c1079f253e7dffe15f60d05852
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sat Mar 26 19:16:34 2011 +0700
+
+    ignoring .dbf sample file
+
+commit e940c41876702ef4f349a9f9bcaf66d9966f82ba
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sat Mar 26 19:15:10 2011 +0700
+
+    information about file name being open
+
+commit aa2ba6b94aa76c0b74b992cffe825726ac3b231a
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sat Mar 26 19:07:42 2011 +0700
+
+    progress_window_show()
+
+commit d7f22d96c34ae7d4098d99a7efcb1429371c68c4
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sat Mar 26 18:56:40 2011 +0700
+
+    modified win32 version generator
+
+commit 766015441a83727531b5f4e090338ca5d6a072e4
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sat Mar 26 02:17:57 2011 +0700
+
+    typo in setup.py
+
+commit cdfab98e9ff27759ba22112acd4b0a66460dcd7c
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sat Mar 26 01:47:17 2011 +0700
+
+    v1.0.0-20110326_0146
+
+commit 28c891ac656315937da781cb2f2c07b0d1b5afb6
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sat Mar 26 01:45:51 2011 +0700
+
+    dos format
+
+commit 1aeb1a2f828b1eb204a2b6d5323eecfd189d63cb
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sat Mar 26 01:45:16 2011 +0700
+
+    windows build
+
+commit bf15a9315fe8283f065bedb77aa1ea0eb859a300
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sat Mar 26 01:06:25 2011 +0700
+
+    batch file to build on windows
+
+commit f3d110cc3d5f3b5a75b4923f0b19c4fdf59dfdf5
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sat Mar 26 01:06:07 2011 +0700
+
+    tools
+
+commit e264a543ca1032147e93a2ca486bc68212676ab4
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sat Mar 26 01:03:09 2011 +0700
+
+    removing archive
+
+commit 3d6284a415a906f64b7c36c8fd233c5914d9ea66
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sat Mar 26 00:54:33 2011 +0700
+
+    readme
+
+commit daa94c6f55b12091eef118a54b44812829ccec54
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sat Mar 26 00:52:11 2011 +0700
+
+    preparing windows binary and installation
+
+commit 5f99214a5472b4ed856b26154aea76d3e1809430
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sat Mar 26 00:36:59 2011 +0700
+
+    v1.0.0-20110326_0036
+
+commit 84106a1807e4f3f8f749bb841788fa22dfe495c5
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sat Mar 26 00:36:00 2011 +0700
+
+    ignoring simpledbfbrowser.zip archive
+
+commit 63576e9736f8f30e08642eb0c8cf59a7330774b9
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sat Mar 26 00:35:16 2011 +0700
+
+    patch for dbf/dates.py on invalid dates
+
+commit fe36e50274a8b85e51b07605d1bbb9d098cfdbf1
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sat Mar 26 00:28:31 2011 +0700
+
+    thread for reading dbf and progress bar
+
+commit c5c58ad2c451adcc015f309fe72f98d15e58a191
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Fri Mar 25 23:24:13 2011 +0700
+
+    detail on README.txt
+
+commit 79e3b333282df5f1c64183ef5fac3895f348d5d3
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Fri Mar 25 22:59:31 2011 +0700
+
+    licenses from gnu site
+
+commit c6a8767db72e81618b98c1898e9c1da9c85bdcd1
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Fri Mar 25 22:57:23 2011 +0700
+
+    readme and licenses
+
+commit 699259f7572739082669713c04e0b89748b67535
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Fri Mar 25 22:56:12 2011 +0700
+
+    README file
+
+commit d919237748792f37376888ac640fed7899b3b5b2
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Fri Mar 25 22:47:20 2011 +0700
+
+    credit
+
+commit 6ea248c8baa418b44171834903dc99ba8b97d730
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Fri Mar 25 22:40:11 2011 +0700
+
+    initial version

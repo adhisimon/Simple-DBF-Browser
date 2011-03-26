@@ -18,6 +18,7 @@ setup(
                 "gtkrc",
                 "README.txt",
                 "LICENSES.txt",
+                "CHANGELOG.txt",
                 ("gtk+_2.22.1-1_win32/share/themes", "share/themes"),
                 ("gtk+_2.22.1-1_win32/lib", "lib"),
                 ("gtk+_2.22.1-1_win32/etc", "etc"),
