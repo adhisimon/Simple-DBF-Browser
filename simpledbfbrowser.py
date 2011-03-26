@@ -139,6 +139,12 @@ class EksplorasiDbf:
         self.dbf_file = dbf_file
         self.window.set_title("%s: %s" % (self.main_title, os.path.basename(dbf_file)))
 
+        self.progress_window_show()
+
+        read_dbf = ReadDbf(self)
+        read_dbf.start()
+
+    def progress_window_show(self):
         self.progress_window = gtk.Window(gtk.WINDOW_TOPLEVEL)
         self.progress_window.set_title('Reading DBF file...')
         self.progress_window.set_border_width(10)
@@ -168,9 +174,6 @@ class EksplorasiDbf:
         self.progress_window.show()
 
         self.progress_timeout_source_id = gobject.timeout_add(500, self.progress_bar_timeout)
-
-        read_dbf = ReadDbf(self)
-        read_dbf.start()
 
     def progress_bar_timeout(self):
         self.progress_bar.pulse()
