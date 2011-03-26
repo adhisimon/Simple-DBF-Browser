@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from simpledbfbrowser import EksplorasiDbf
+from simpledbfbrowser import SimpleDbfBrowser
 import re
 
 if __name__ == "__main__":
@@ -8,7 +8,7 @@ if __name__ == "__main__":
     iss_file = "simpledbfbrowser.iss"
     cx_file = "setup.py"
 
-    versi = EksplorasiDbf.version
+    versi = SimpleDbfBrowser.version
 
     # iss
     f = open(iss_file, "r")
