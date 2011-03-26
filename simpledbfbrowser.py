@@ -175,10 +175,13 @@ class EksplorasiDbf:
 
         self.progress_timeout_source_id = gobject.timeout_add(500, self.progress_bar_timeout)
 
+        while gtk.events_pending():
+            gtk.main_iteration()
+
     def progress_bar_timeout(self):
         self.progress_bar.pulse()
         if self.row_count:
-            self.progress_bar_update_status('%d rows' % self.row_count)
+            self.progress_bar_update_status('%s: %d rows' % (os.path.basename(self.dbf_file), self.row_count))
         return True
 
     def progress_bar_update_status(self, message):
