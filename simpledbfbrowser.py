@@ -20,7 +20,7 @@ gobject.threads_init()
 
 class SimpleDbfBrowser:
     main_title = "Simple DBF Browser"
-    version = "1.0.1-20110327_0208"
+    version = "1.0.1-20110327_0324.dev"
 
     window = None
     content_box = None
