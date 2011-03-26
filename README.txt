@@ -16,7 +16,7 @@ Supported Operating System
 We only provide binary build for MS Windows because we don't have
 access to other operating system but MS Windows and Linux.
 
-Building on other operating system should be easy. We looking for
+Building on other operating system should be easy. We are looking for
 contributor to make a binary build on other operating system. If you
 want to contribute and have an access to a Mac OS X or other operating
 systems, please contact us at contact@mondial.co.id.
