@@ -25,6 +25,7 @@ class EksplorasiDbf:
     list_view = None
     dbf_file = None
     dbf_table = None
+    dbf_length = None
     row_count = 0
 
     progress_message = None
@@ -143,6 +144,8 @@ class EksplorasiDbf:
         else:
             dbf_file = self.dbf_file
 
+        self.dbf_length = None
+
         self.row_count = 0
         self.window.set_title("%s: %s" % (self.main_title, os.path.basename(dbf_file)))
 
@@ -193,8 +196,8 @@ class EksplorasiDbf:
         if self.row_count:
             self.progress_bar_update_status('%s: %d rows' % (os.path.basename(self.dbf_file), self.row_count))
 
-            if self.row_count and self.dbf_table and len(self.dbf_table):
-                progress_fraction = 1.0 * self.row_count / len(self.dbf_table)
+            if self.row_count and self.dbf_table and self.dbf_length:
+                progress_fraction = 1.0 * self.row_count / self.dbf_length
                 self.progress_bar.set_fraction(progress_fraction)
             else:
                 self.progress_bar.pulse()
@@ -279,6 +282,7 @@ class ReadDbf(threading.Thread):
 
         print datetime.today(), "opening dbf file"
         caller.dbf_table = dbf.Table(caller.dbf_file, read_only = True)
+        caller.dbf_length = len(caller.dbf_table)
 
         print datetime.today(), "retrieving fields"
         fields = dbf.get_fields(caller.dbf_table)
