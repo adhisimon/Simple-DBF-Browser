@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Simple DBF Browser"
-#define MyAppVersion "1.0.1-20110327_0208"
+#define MyAppVersion "1.0.1-20110327_0324.dev"
 #define MyAppPublisher "Mondial Teknologi Solusi, PT"
 #define MyAppURL "http://www.mondial.co.id/products/simpledbfbrowser"
 #define MyAppExeName "simpledbfbrowser.exe"
