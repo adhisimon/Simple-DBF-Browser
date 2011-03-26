@@ -196,9 +196,6 @@ class EksplorasiDbf:
             if self.row_count and self.dbf_table and len(self.dbf_table):
                 progress_fraction = 1.0 * self.row_count / len(self.dbf_table)
                 self.progress_bar.set_fraction(progress_fraction)
-                print 'row count: %s' % self.row_count
-                print 'total row: %s' % len(self.dbf_table)
-                print 'progress: %s' % progress_fraction
             else:
                 self.progress_bar.pulse()
 
