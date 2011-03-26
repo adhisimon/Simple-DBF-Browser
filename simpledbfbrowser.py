@@ -131,16 +131,26 @@ class EksplorasiDbf:
 
         response = dialog.run()
         if response == gtk.RESPONSE_OK:
-            self.open_dbf_file(dialog.get_filename())
+            self.dbf_file = dialog.get_filename()
+            dialog.destroy()
+            self.open_dbf_file(self.dbf_file)
+        else:
+            dialog.destroy()
 
-        dialog.destroy()
+    def open_dbf_file(self, dbf_file = None):
+        if dbf_file:
+            self.dbf_file = dbf_file
+        else:
+            dbf_file = self.dbf_file
 
-    def open_dbf_file(self, dbf_file):
-        self.dbf_file = dbf_file
         self.row_count = 0
         self.window.set_title("%s: %s" % (self.main_title, os.path.basename(dbf_file)))
 
         self.progress_window_show()
+
+        print datetime.today(), 'detaching model'
+        self.list_view.set_model()
+        print datetime.today(), 'model detached'
 
         read_dbf = ReadDbf(self)
         read_dbf.start()
@@ -176,8 +186,8 @@ class EksplorasiDbf:
 
         self.progress_timeout_source_id = gobject.timeout_add(500, self.progress_bar_timeout)
 
-        while gtk.events_pending():
-            gtk.main_iteration()
+        #while gtk.events_pending():
+        #    gtk.main_iteration()
 
     def progress_bar_timeout(self):
         if self.row_count:
@@ -265,16 +275,17 @@ class ReadDbf(threading.Thread):
     def run(self):
         caller = self.caller
 
+        if caller.scrolled_window:
+            print datetime.today(), "destroying old visualization"
+            gobject.idle_add(caller.scrolled_window.destroy)
+            print datetime.today(), "old visualization destroyed"
+
         print datetime.today(), "opening dbf file"
         caller.dbf_table = dbf.Table(caller.dbf_file, read_only = True)
 
         print datetime.today(), "retrieving fields"
         fields = dbf.get_fields(caller.dbf_table)
         print datetime.today(), "fields retrieved"
-
-        if caller.scrolled_window:
-            print datetime.today(), "destroying old visualization"
-            gobject.idle_add(caller.scrolled_window.destroy)
 
         print datetime.today(), "creating new visualization"
 
