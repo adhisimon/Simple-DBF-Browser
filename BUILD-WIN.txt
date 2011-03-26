@@ -1,0 +1,60 @@
+Date: 2011-03-27 03:48 GMT+7
+
+WHY DO YOU WANT TO BUILD BY YOUR SELF:
+--------------------------------------
+Sometimes, when we commit some codes, we don't release official binary
+version soon for every commit we have made. It just for simplicity. We
+just release official binary version if it has major improvement or it
+is critical to release it.
+
+By building by your self, you can get latest version a.k.a development
+version.
+
+Latest development version, although it was call as "development", has
+newest features and bugfixed. We expect it is stable enough before we
+commit to central repository.
+
+HOW TO BUILD BINARY VERSION ON MS-WINDOWS:
+------------------------------------------
+Our full source code can be grabbed at:
+https://github.com/adhisimon/Simple-DBF-Browser
+
+Example how to get latest up to date source code of SimpleDBFBrowser:
+git clone git://github.com/adhisimon/Simple-DBF-Browser.git
+
+To build binary version (and installation/setup files) of
+SimpleDBFBrowser, you need these prerequisites:
+
+* Python (http://www.python.org/)
+* PyGTK (http://www.pygtk.org/)
+* cx_Freeze (cx-freeze.sourceforge.net/)
+* Inno Setup (www.jrsoftware.org/isinfo.php)
+
+After you get full SimpleDBFBrowser's source code and install all those
+prerequisites, edit first two line on "build-win.bat" to match your
+environment. First line to specify where is "python.exe" installed on
+your box. Second line to specify where is "iscc.exe" from Inno Setup
+installed on your box.
+
+After you fix "build-win.bat", just run "build-win.bat". This batch file
+will automate building binary and create installation file on "build"
+directory.
+
+HOW TO BUILD BINARY VERSION ON MAC
+----------------------------------
+We haven't try to build binary version on Mac because we don't have
+access to a mac box.
+
+But, we can suggest you to use py2app which can be found on:
+http://wiki.python.org/moin/MacPython/py2app
+
+Please contact us wheter you have successfuly or failed build on Mac.
+
+CONTACT US
+----------
+For more information, you can visit:
+http://www.mondial.co.id/products/simpledbfbrowser
+
+or just send us an email to: contact@mondial.co.id
+
+Cheers....

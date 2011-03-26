@@ -16,6 +16,8 @@ setup(
             "include_files": [
                 "resources/logo.png",
                 "gtkrc",
+                "BUILD-WIN.txt",
+                "BUILD-MAC.txt",
                 "README.txt",
                 "LICENSES.txt",
                 "CHANGELOG.txt",
