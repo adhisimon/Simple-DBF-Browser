@@ -3,7 +3,7 @@ from cx_Freeze import setup, Executable
 
 exe = Executable(
     script = "simpledbfbrowser.py",
-    base = "Win32GUI"
+    base = "Win32GUI",
 )
 setup(
     name = "SimpleDBFBrowser",
@@ -12,6 +12,7 @@ setup(
     executables = [exe],
     options = {
         "build_exe": {
+            "build_exe": "build/exe.win32",
             "include_files": [
                 "resources/logo.png",
                 "gtkrc",

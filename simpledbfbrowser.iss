@@ -23,7 +23,7 @@ DefaultDirName={pf}\MTS\Simple DBF Browser
 DefaultGroupName={#MyAppName}
 LicenseFile=LICENSES.txt
 InfoBeforeFile=README.txt
-OutputBaseFilename=simpledbfbrowser-setup
+OutputBaseFilename=simpledbfbrowser-{#MyAppVersion}
 OutputDir=build
 Compression=lzma
 SolidCompression=yes
@@ -35,8 +35,8 @@ Name: "english"; MessagesFile: "compiler:Default.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "build\exe.win32-2.7\simpledbfbrowser.exe"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\User\Documents\adhisimon\simpledbfbrowser\build\exe.win32-2.7\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+Source: "build\exe.win32\simpledbfbrowser.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\User\Documents\adhisimon\simpledbfbrowser\build\exe.win32\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]
