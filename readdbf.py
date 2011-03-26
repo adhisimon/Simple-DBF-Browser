@@ -23,6 +23,7 @@ class ReadDbf(threading.Thread):
 
     def run(self):
         caller = self.caller
+        statusbar_context_id = caller.statusbar.get_context_id('ReadDbf Thread')
 
         if caller.scrolled_window:
             print datetime.today(), "destroying old visualization"
@@ -30,6 +31,7 @@ class ReadDbf(threading.Thread):
             print datetime.today(), "old visualization destroyed"
 
         print datetime.today(), "opening dbf file"
+        gobject.idle_add(caller.statusbar.push, statusbar_context_id, 'opening %s' % caller.dbf_file)
         caller.dbf_table = dbf.Table(caller.dbf_file, read_only = True)
         caller.dbf_length = len(caller.dbf_table)
 
@@ -99,6 +101,8 @@ class ReadDbf(threading.Thread):
 
         print datetime.today(), "removing progress pulse"
         gobject.source_remove(caller.progress_timeout_source_id)
+
+        gobject.idle_add(caller.statusbar.push, statusbar_context_id, "%s (%d rows)" % (os.path.basename(caller.dbf_file), caller.dbf_length))
 
         self.finished = True
 

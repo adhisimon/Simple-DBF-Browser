@@ -26,6 +26,7 @@ class SimpleDbfBrowser:
     content_box = None
     scrolled_window = None
     statusbar = None
+    statusbar_context_id = None
     list_view = None
     dbf_file = None
     dbf_table = None
@@ -62,6 +63,9 @@ class SimpleDbfBrowser:
         self.vbox.pack_start(self.content_box, True, True, 0)
 
         self.statusbar = gtk.Statusbar()
+        self.statusbar_context_id = self.statusbar.get_context_id('SimpleDBFBrowser')
+        self.statusbar.push(self.statusbar_context_id, 'SimpleDBFBrowser v%s' % self.version)
+        self.statusbar.pop(self.statusbar_context_id)
         self.statusbar.show()
         self.vbox.pack_start(self.statusbar, False, True, 0)
 
