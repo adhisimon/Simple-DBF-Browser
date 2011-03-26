@@ -137,6 +137,7 @@ class EksplorasiDbf:
 
     def open_dbf_file(self, dbf_file):
         self.dbf_file = dbf_file
+        self.row_count = 0
         self.window.set_title("%s: %s" % (self.main_title, os.path.basename(dbf_file)))
 
         self.progress_window_show()
@@ -179,9 +180,20 @@ class EksplorasiDbf:
             gtk.main_iteration()
 
     def progress_bar_timeout(self):
-        self.progress_bar.pulse()
         if self.row_count:
             self.progress_bar_update_status('%s: %d rows' % (os.path.basename(self.dbf_file), self.row_count))
+
+            if self.row_count and self.dbf_table and len(self.dbf_table):
+                progress_fraction = 1.0 * self.row_count / len(self.dbf_table)
+                self.progress_bar.set_fraction(progress_fraction)
+                print 'row count: %s' % self.row_count
+                print 'total row: %s' % len(self.dbf_table)
+                print 'progress: %s' % progress_fraction
+            else:
+                self.progress_bar.pulse()
+
+        else:
+            self.progress_bar.pulse()
         return True
 
     def progress_bar_update_status(self, message):
