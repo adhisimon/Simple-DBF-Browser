@@ -1,3 +1,39 @@
+commit ee39173b0f8e387696e7416cf0160dcf399fa0cd
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sun Mar 27 03:26:35 2011 +0700
+
+    v1.0.1-20110327_0324.dev on setup.py and simpledbfbrowser.iss
+
+commit a1975f896d98fee485c69873913f8bd228534bad
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sun Mar 27 03:26:13 2011 +0700
+
+    patch sync-version.py to use SimpleDbfBrowser
+
+commit b4d46d01a8e2be016dfdd3debdf26c013979ea52
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sun Mar 27 03:25:42 2011 +0700
+
+    v1.0.1-20110327_0324.dev
+
+commit 5475468bef01f9ade44d287f5d8adc69d678aaa8
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sun Mar 27 03:23:16 2011 +0700
+
+    table information on status bar
+
+commit 46f3cc9db13aaf8d10623f29a4605628c366e842
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sun Mar 27 02:57:28 2011 +0700
+
+    chmod -x readdbf.py
+
+commit 8827a1e2a2e49518b7f396162b40c20ae2855c18
+Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
+Date:   Sun Mar 27 02:57:05 2011 +0700
+
+    statusbar
+
 commit 46c3fcf02f5d70ecd1ad9a62af460735ec7f2dba
 Author: Adhidarma Hadiwinoto <adhisimon@mondial.co.id>
 Date:   Sun Mar 27 02:47:49 2011 +0700
