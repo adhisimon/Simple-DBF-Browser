@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Simple DBF Browser"
-#define MyAppVersion "1.0.1-20110327_0154"
+#define MyAppVersion "1.0.1-20110327_0208"
 #define MyAppPublisher "Mondial Teknologi Solusi, PT"
 #define MyAppURL "http://www.mondial.co.id/products/simpledbfbrowser"
 #define MyAppExeName "simpledbfbrowser.exe"
@@ -23,7 +23,7 @@ DefaultDirName={pf}\MTS\Simple DBF Browser
 DefaultGroupName={#MyAppName}
 LicenseFile=LICENSES.txt
 InfoBeforeFile=README.txt
-OutputBaseFilename=simpledbfbrowser-{#MyAppVersion}
+OutputBaseFilename=simpledbfbrowser-win32-{#MyAppVersion}
 OutputDir=build
 Compression=lzma
 SolidCompression=yes
