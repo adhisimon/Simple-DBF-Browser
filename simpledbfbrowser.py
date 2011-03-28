@@ -33,6 +33,12 @@ class SimpleDbfBrowser:
     dbf_length = None
     row_count = 0
 
+    progress_rate = None
+    progress_last_timestamp = 0
+    last_row_count = 0
+    open_dbf_start_time = 0
+    progress_elapsed = None
+
     progress_message = None
 
     def __init__(self):
@@ -195,8 +201,11 @@ class SimpleDbfBrowser:
             dbf_file = self.dbf_file
 
         self.dbf_length = None
-
         self.row_count = 0
+        self.last_row_count = 0
+        self.progress_last_timestamp = 0
+        self.open_dbf_start_time = time.time()
+
         self.window.set_title("%s: %s" % (self.main_title, os.path.basename(dbf_file)))
 
         self.progress_window_show()
@@ -221,12 +230,20 @@ class SimpleDbfBrowser:
         vbox = gtk.VBox(False, 5)
 
         label = gtk.Label('Please wait while reading DBF file...')
-        vbox.pack_start(label, True, True, 5)
+        vbox.pack_start(label, True, True, 0)
         label.show()
 
         self.progress_message = gtk.Label('preparing')
-        vbox.pack_start(self.progress_message, True, True, 5)
         self.progress_message.show()
+        vbox.pack_start(self.progress_message, True, True, 0)
+
+        self.progress_rate = gtk.Label('0 row per second')
+        self.progress_rate.show()
+        vbox.pack_start(self.progress_rate, True, True, 0)
+
+        self.progress_elapsed = gtk.Label('Elapsed time: -')
+        self.progress_elapsed.show()
+        vbox.pack_start(self.progress_elapsed, True, True, 0)
 
         self.progress_bar = gtk.ProgressBar()
         self.progress_bar.set_orientation(gtk.PROGRESS_LEFT_TO_RIGHT)
@@ -243,6 +260,9 @@ class SimpleDbfBrowser:
         #    gtk.main_iteration()
 
     def progress_bar_timeout(self):
+        elapsed = time.time() - self.open_dbf_start_time
+        self.progress_elapsed.set_text("Elapsed time: {0:.0f} seconds".format(elapsed))
+
         if self.row_count:
             self.progress_bar_update_status('%s: %d / %d rows' % (os.path.basename(self.dbf_file), self.row_count, self.dbf_length))
 
@@ -250,6 +270,15 @@ class SimpleDbfBrowser:
                 progress_fraction = 1.0 * self.row_count / self.dbf_length
                 self.progress_bar.set_fraction(progress_fraction)
                 self.progress_bar.set_text("{0:.0f}%".format(progress_fraction * 100))
+
+                delta_rows = self.row_count - self.last_row_count
+                now = time.time()
+                delta_time = now - self.progress_last_timestamp
+                rate = 1.0 * delta_rows / delta_time
+                self.progress_rate.set_text("{0:.2f} rows per seconds".format(rate))
+
+                self.progress_last_timestamp = now
+                self.last_row_count = self.row_count
             else:
                 self.progress_bar.pulse()
 
