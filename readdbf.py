@@ -33,6 +33,8 @@ class ReadDbf(threading.Thread):
         print datetime.today(), "opening dbf file"
         gobject.idle_add(caller.statusbar.push, statusbar_context_id, 'opening %s' % caller.dbf_file)
         caller.dbf_table = dbf.Table(caller.dbf_file, read_only = True)
+        print datetime.today(), "dbf file opened"
+
         caller.dbf_length = len(caller.dbf_table)
 
         print datetime.today(), "retrieving fields"
@@ -104,6 +106,8 @@ class ReadDbf(threading.Thread):
 
         gobject.idle_add(caller.statusbar.push, statusbar_context_id, "%s (%d rows)" % (os.path.basename(caller.dbf_file), caller.dbf_length))
         gobject.idle_add(caller.table_info_menu_item.set_sensitive, True)
+
+        print datetime.today(), 'finished on %f seconds' % (time.time() - caller.open_dbf_start_time)
 
         self.finished = True
 
