@@ -259,7 +259,7 @@ class SimpleDbfBrowser:
         self.progress_window.add(vbox)
         self.progress_window.show()
 
-        self.progress_timeout_source_id = gobject.timeout_add(500, self.progress_bar_timeout)
+        self.progress_timeout_source_id = gobject.timeout_add(1000, self.progress_bar_timeout)
 
         #while gtk.events_pending():
         #    gtk.main_iteration()
