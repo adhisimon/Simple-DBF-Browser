@@ -103,6 +103,7 @@ class ReadDbf(threading.Thread):
         gobject.source_remove(caller.progress_timeout_source_id)
 
         gobject.idle_add(caller.statusbar.push, statusbar_context_id, "%s (%d rows)" % (os.path.basename(caller.dbf_file), caller.dbf_length))
+        gobject.idle_add(caller.table_info_menu_item.set_sensitive, True)
 
         self.finished = True
 

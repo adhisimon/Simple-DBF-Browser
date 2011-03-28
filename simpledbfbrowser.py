@@ -79,6 +79,7 @@ class SimpleDbfBrowser:
             <menubar name="MenuBar">
                 <menu action="File">
                     <menuitem action="Open" />
+                    <menuitem action="TableInfo" />
                     <separator/>
                     <menuitem action="Exit" />
                 </menu>
@@ -96,6 +97,7 @@ class SimpleDbfBrowser:
             [
                 ("File", None, "_File", None, None, None),
                 ("Open", None, "_Open", "<control>O", None, self.show_open_dialog),
+                ("TableInfo", None, "Table _Information", "<control>I", None, self.show_table_info),
                 ("Exit", None, "Exit", "<control>X", "Keluar aplikasi", gtk.main_quit),
                 ("Help", None, "_Help", None, None, None),
                 ("About", None, "_About", "<control>A", None, self.show_about_window),
@@ -105,6 +107,9 @@ class SimpleDbfBrowser:
         ui_manager.insert_action_group(action_group, 0)
         ui_manager.add_ui_from_string(ui)
 
+        self.table_info_menu_item = ui_manager.get_widget("/MenuBar/File/TableInfo")
+        self.table_info_menu_item.set_sensitive(False)
+
         menu_bar = ui_manager.get_widget("/MenuBar")
         self.vbox.pack_start(menu_bar, False, False, 0)
         menu_bar.show()
@@ -113,6 +118,39 @@ class SimpleDbfBrowser:
 
     def main(self):
         gtk.main()
+
+    def show_table_info(self, w):
+        if not self.dbf_table:
+            return
+
+        window = gtk.Window(gtk.WINDOW_TOPLEVEL)
+        window.set_title("Table Information")
+        window.set_border_width(10)
+        window.set_property('skip-taskbar-hint', True)
+        window.set_transient_for(self.window)
+
+        vbox = gtk.VBox(False, 5)
+        vbox.show()
+
+        label = gtk.Label(self.dbf_file)
+        label.show()
+
+        vbox.pack_start(label, False, False, 0)
+        window.add(vbox)
+
+        textview = gtk.TextView()
+        textview.set_editable(False)
+        textview.set_cursor_visible(False)
+        textview.set_right_margin(10)
+
+        textbuffer = textview.get_buffer()
+        textbuffer.set_text(str(self.dbf_table))
+
+        textview.show()
+        vbox.pack_start(textview, True, True, 0)
+
+        window.set_modal(True)
+        window.show()
 
     def show_open_dialog(self, w):
         dialog = gtk.FileChooserDialog(
