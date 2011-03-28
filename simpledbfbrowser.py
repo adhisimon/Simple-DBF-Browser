@@ -37,7 +37,8 @@ class SimpleDbfBrowser:
     progress_last_timestamp = 0
     last_row_count = 0
     open_dbf_start_time = 0
-    progress_elapsed = None
+    progress_elapsed_time = None
+    progress_remaining_time = None
 
     progress_message = None
 
@@ -241,9 +242,13 @@ class SimpleDbfBrowser:
         self.progress_rate.show()
         vbox.pack_start(self.progress_rate, True, True, 0)
 
-        self.progress_elapsed = gtk.Label('Elapsed time: -')
-        self.progress_elapsed.show()
-        vbox.pack_start(self.progress_elapsed, True, True, 0)
+        self.progress_elapsed_time = gtk.Label('Elapsed time: -')
+        self.progress_elapsed_time.show()
+        vbox.pack_start(self.progress_elapsed_time, True, True, 0)
+
+        self.progress_remaining_time = gtk.Label('Remaining time: -')
+        self.progress_remaining_time.show()
+        vbox.pack_start(self.progress_remaining_time, True, True, 0)
 
         self.progress_bar = gtk.ProgressBar()
         self.progress_bar.set_orientation(gtk.PROGRESS_LEFT_TO_RIGHT)
@@ -261,7 +266,7 @@ class SimpleDbfBrowser:
 
     def progress_bar_timeout(self):
         elapsed = time.time() - self.open_dbf_start_time
-        self.progress_elapsed.set_text("Elapsed time: {0:.0f} seconds".format(elapsed))
+        self.progress_elapsed_time.set_text("Elapsed time: {0:.0f} seconds".format(elapsed))
 
         if self.row_count:
             self.progress_bar_update_status('%s: %d / %d rows' % (os.path.basename(self.dbf_file), self.row_count, self.dbf_length))
@@ -271,6 +276,11 @@ class SimpleDbfBrowser:
                 self.progress_bar.set_fraction(progress_fraction)
                 self.progress_bar.set_text("{0:.0f}%".format(progress_fraction * 100))
 
+                # remaining time
+                remaining = (elapsed / progress_fraction) - elapsed
+                self.progress_remaining_time.set_text("Remaining time: {0:.0f} seconds".format(remaining))
+
+                # rate (rows per second calculation)
                 delta_rows = self.row_count - self.last_row_count
                 now = time.time()
                 delta_time = now - self.progress_last_timestamp
