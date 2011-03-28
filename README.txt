@@ -42,6 +42,12 @@ https://github.com/adhisimon/Simple-DBF-Browser
 You can get the source code by visiting that web site or using git:
 git clone git://github.com/adhisimon/Simple-DBF-Browser.git
 
+Information about how to build binary version on MS Windows can be found
+on "BUILD-WIN.txt".
+
+Information about how to build binary version on MS Windows can be found
+on "BUILD-MAC.txt".
+
 License
 -------
 Licensed under GPLv2
