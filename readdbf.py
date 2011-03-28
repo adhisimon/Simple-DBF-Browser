@@ -64,7 +64,7 @@ class ReadDbf(threading.Thread):
 
         print datetime.today(), "creating columns for fields"
         for field_name in fields:
-            i = i + 1
+            i += 1
             column = gtk.TreeViewColumn(field_name)
             caller.list_view.append_column(column)
             cell = gtk.CellRendererText()
@@ -80,7 +80,7 @@ class ReadDbf(threading.Thread):
         caller.row_count = 0
         print datetime.today(), "iterating table"
         for row in caller.dbf_table:
-            caller.row_count = caller.row_count + 1
+            caller.row_count += 1
             try:
                 data = list(row)
                 data.insert(0, caller.row_count)
