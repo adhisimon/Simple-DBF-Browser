@@ -45,8 +45,8 @@ git clone git://github.com/adhisimon/Simple-DBF-Browser.git
 Information about how to build binary version on MS Windows can be found
 on "BUILD-WIN.txt".
 
-Information about how to build binary version on MS Windows can be found
-on "BUILD-MAC.txt".
+Information about how to build binary version on Mac can be found on
+"BUILD-MAC.txt".
 
 License
 -------
