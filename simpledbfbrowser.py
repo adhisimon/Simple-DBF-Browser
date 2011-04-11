@@ -207,7 +207,7 @@ class SimpleDbfBrowser:
         self.progress_last_timestamp = 0
         self.open_dbf_start_time = time.time()
 
-        self.window.set_title("%s: %s" % (self.main_title, os.path.basename(dbf_file)))
+        self.window.set_title("%s: %s" % (os.path.basename(dbf_file), self.main_title))
 
         self.progress_window_show()
 
