@@ -15,6 +15,7 @@ import string
 
 class ReadDbf(threading.Thread):
     finished = None
+    failed = None
     caller = None
 
     def __init__(self, caller):
@@ -32,7 +33,13 @@ class ReadDbf(threading.Thread):
 
         print datetime.today(), "opening dbf file"
         gobject.idle_add(caller.statusbar.push, statusbar_context_id, 'opening %s' % caller.dbf_file)
-        caller.dbf_table = dbf.Table(caller.dbf_file, read_only = True)
+        try:
+            caller.dbf_table = dbf.Table(caller.dbf_file, read_only = True)
+        except:
+            self.finished = true;
+            self.failed = true;
+            return
+
         print datetime.today(), "dbf file opened"
 
         caller.dbf_length = len(caller.dbf_table)

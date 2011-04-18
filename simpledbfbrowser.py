@@ -191,7 +191,8 @@ class SimpleDbfBrowser:
         if response == gtk.RESPONSE_OK:
             self.dbf_file = dialog.get_filename()
             dialog.destroy()
-            self.open_dbf_file(self.dbf_file)
+            if (os.path.isfile(self.dbf_file)):
+                self.open_dbf_file(self.dbf_file)
         else:
             dialog.destroy()
 
