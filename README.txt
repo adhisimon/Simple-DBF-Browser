@@ -1,3 +1,6 @@
+Warning: This project is no longer maintained. Last code update was on
+more than ten years ago. We have no plan to resume this project.
+
 Simple DBF Browser
 http://www.mondial.co.id/products/simpledbfbrowser/
 ---------------------------------------------------
